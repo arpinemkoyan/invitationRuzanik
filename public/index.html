@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Հրավիրատոմս</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Noto+Serif+Armenian:wght@100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="icon" href="./image/love-letter.png" sizes="32x32" type="image/png" />
+</head>
+
+<body>
+  <div id="full" class="background-video-container" style="display: none">
+    <!-- <video autoplay muted loop playsinline class="background-video">
+        <source src="./video/fabric.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video> -->
+    <div class="content">
+      <div class="lang-switch">
+        <button class="armenian_bttn" onclick="setLang('hy')"></button>
+        <button class="russian_bttn" onclick="setLang('ru')"></button>
+      </div>
+
+      <!-- header -->
+      <div class="header">
+        <div class="header-img">
+          <img src="./image/main-page-img.jpg" />
+        </div>
+        <div class="hscd-content">
+          <p data-key="names"></p>
+        </div>
+        <div>
+          <div class="overlay-upper-fade-one"></div>
+          <div class="overlay-upper-fade-second"></div>
+
+          <div class="timer">
+            <div class="days">
+              <p id="days"></p>
+              <p class="tm-name" data-key="days"></p>
+            </div>
+            <div class="hours">
+              <p id="hours"></p>
+              <p class="tm-name" data-key="times"></p>
+            </div>
+            <div class="minutes">
+              <p id="minutes"></p>
+              <p class="tm-name" data-key="minutes"></p>
+            </div>
+            <div class="seconds">
+              <p id="seconds"></p>
+              <p class="tm-name" data-key="seconds"></p>
+            </div>
+          </div>
+          <div class="overlay-bottom-fade-one"></div>
+          <div class="overlay-bottom-fade-second"></div>
+        </div>
+      </div>
+
+      <!-- main text -->
+      <div class="main-box">
+        <div class="main-text">
+          <div class="calendar-table">
+            <table cellspacing="0" cellpadding="8">
+              <thead>
+                <tr>
+                  <th class="month_name" colspan="7" data-key="month"></th>
+                </tr>
+                <tr>
+                  <th data-key="sun"></th>
+                  <th data-key="mon"></th>
+                  <th data-key="tue"></th>
+                  <th data-key="wed"></th>
+                  <th data-key="thu"></th>
+                  <th data-key="fri"></th>
+                  <th data-key="sat"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td>1</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>4</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>
+                    <div class="heart-container">
+                      <img src="./image/heart.png" alt="heart" class="heart-img" />
+                      <span class="heart-number">7</span>
+                    </div>
+                  </td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>10</td>
+                  <td>11</td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>14</td>
+                  <td>15</td>
+                  <td>16</td>
+                  <td>17</td>
+                  <td>18</td>
+                  <td>19</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>21</td>
+                  <td>22</td>
+                  <td>23</td>
+                  <td>24</td>
+                  <td>25</td>
+                  <td>26</td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td>28</td>
+                  <td>29</td>
+                  <td>30</td>
+                  <td>31</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="text-box">
+            <div class="full-text">
+              <p class="text-h1" data-key="darlings"></p>
+              <p class="text2" data-key="text"></p>
+            </div>
+          </div>
+        </div>
+        <div class="main-img">
+          <img class="fst-img imgs" src="./image/8622c2484e2cbb07868395d1667043b1.jpg" />
+          <img class="img-scd imgs" src="./image/second.jpg" />
+          <img class="img-three imgs" src="./image/second.jpg" />
+        </div>
+      </div>
+
+      <!-- schedule  -->
+      <div class="scd-box">
+        <p class="schedule" data-key="schedule"></p>
+        <div class="schedule-content">
+          <div class="bride-home">
+            <img class="sched-img slide-in" src="./image/flower.png" />
+            <p class="slide-in">11։00</p>
+            <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
+              <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
+              <span data-key="bride_home"></span>
+            </a>
+          </div>
+          <div class="church">
+            <img class="sched-img slide-in" src="./image/church.png" />
+            <p class="slide-in">14։00</p>
+            <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
+              <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
+              <span data-key="church"></span>
+            </a>
+          </div>
+          <div class="party">
+            <img class="sched-img slide-in" src="./image/cheers.png" />
+            <p class="slide-in">17։00</p>
+            <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
+              <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
+              <span data-key="party"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="automusic">
+    <audio id="backgroundMusic" loop autoplay>
+      <source src="./music/videoplayback.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div class="content">
+      <div class="lang-switch">
+        <button class="armenian_bttn" onclick="setLang('hy')"></button>
+        <button class="russian_bttn" onclick="setLang('ru')"></button>
+      </div>
+      <!-- Play button -->
+      <p class="openInvi" data-key="open_invitation"></p>
+      <div id="arrow">
+        <p id="movingImage">></p>
+        <p class="dots"></p>
+        <p class="shadoww"></p>
+      </div>
+    </div>
+</body>
+
+<script>
+  const translations = {
+    hy: {
+      names: "Կառլեն և Ռուզաննա",
+      days: "Օր",
+      times: "Ժամ",
+      minutes: "Րոպե",
+      seconds: "Վայրկյան",
+      month: "Հուլիս",
+      darlings: "Սիրելի հյուրեր",
+      text: "Մենք ճանապարհ ենք անցել՝ լի սիրով, երջանկությամբ ու միասին հաղթահարած դժվարություններով։ Այժմ եկել է ժամանակը միավորվելու՝ որպես ամուսիններ, և մենք՝ սիրով ու մեծ ուրախությամբ, հրավիրում ենք Ձեզ մեր սիրո և երջանկության օրը միասին նշելու, որը տեղի կունենա`",
+      schedule: "Ծրագիր",
+      bride_home: "Հարսի Տուն",
+      church: "Եկեղեցի",
+      party: "Հարսանյաց սրահ",
+      open_invitation: "Բացի՛ր հրավիրատոմսը",
+      sun: "Կի",
+      mon: "Եկ",
+      tue: "Եք",
+      wed: "Չո",
+      thu: "Հի",
+      fri: "Ու",
+      sat: "Շա",
+    },
+    ru: {
+      names: "Карлен и Рузанна",
+      days: "День",
+      times: "Час",
+      minutes: "Минут",
+      seconds: "Секунд",
+      month: "Рузанна",
+      darlings: "Рузанна հյուրեր",
+      text: "Рузанна",
+      schedule: "Рузанна",
+      bride_home: "РузаннаՏուն",
+      church: "Рузанна",
+      party: "Рузанна սրահ",
+      open_invitation: "Рузанна հրավիրատոմսը",
+      sun: "Вс",
+      mon: "Пн",
+      tue: "Вт",
+      wed: "Ср",
+      thu: "Чт",
+      fri: "Пт",
+      sat: "Сб",
+    },
+  };
+
+  function setLang(lang) {
+    document.querySelectorAll("[data-key]").forEach((el) => {
+      const key = el.getAttribute("data-key");
+      el.textContent = translations[lang][key];
+    });
+  }
+  document.addEventListener("DOMContentLoaded", () => setLang("hy"));
+  const endTime = new Date("July 7, 2025 12:00:00");
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const distance = endTime - now;
+    // Calculate time components
+    const days =
+      Math.floor(distance / (1000 * 60 * 60 * 24)) > 0 ?
+        Math.floor(distance / (1000 * 60 * 60 * 24)) :
+        0;
+    const hours =
+      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) > 0 ?
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) :
+        0;
+    const minutes =
+      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) > 0 ?
+        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) :
+        0;
+    const seconds =
+      Math.floor((distance % (1000 * 60)) / 1000) > 0 ?
+        Math.floor((distance % (1000 * 60)) / 1000) :
+        0;
+    // Display the result in the element with id="timer"
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+  }
+  // Update the timer every second
+  const x = setInterval(updateTimer, 1000);
+  // Initial call to display the timer immediately on page load
+  updateTimer();
+  var audio = document.getElementById("backgroundMusic");
+  document
+    .getElementById("movingImage")
+    .addEventListener("click", function () {
+      audio.play().catch(function (error) {
+        console.error("Audio playback failed:", error);
+      });
+      if (window.innerWidth <= 463) {
+        this.style.left = "276px";
+      } else if (window.innerWidth > 463 && window.innerWidth <= 580) {
+        this.style.left = "342px";
+      } else {
+        this.style.left = "402px";
+      }
+      setTimeout(() => {
+        document.getElementById("automusic").style.display = "none";
+        document.getElementById("full").style.display = "block";
+      }, 2000); // 5000 milliseconds = 5 seconds
+      observeImages();
+      slideIn();
+    });
+
+  function observeImages() {
+    const images = document.querySelectorAll(".imgs");
+    // Options for the observer (threshold controls when the callback is triggered)
+    const options = {
+      root: null,
+      threshold: 0.2, // Trigger when 20% of the image is in view
+    };
+    // Callback function for the observer
+    const callback = (entries, observer) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add("visible");
+          }, index * 300); // Staggered effect
+          observer.unobserve(entry.target); // Stop observing once it's animated
+        }
+      });
+    };
+    // Create the Intersection Observer
+    const observer = new IntersectionObserver(callback, options);
+    // Observe each image
+    images.forEach((image) => {
+      observer.observe(image);
+    });
+  }
+
+  function slideIn() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, {
+      threshold: 0.3
+    }
+    );
+    document.querySelectorAll(".slide-in").forEach((div) => {
+      observer.observe(div);
+    });
+  }
+</script>
+
+</html>

@@ -1,0 +1,688 @@
+@font-face {
+    font-family: 'armhandwrite';
+    src: url('./fonts/ArmAllegroU1.ttf') ;
+}
+
+@font-face {
+    font-family: "vrdznagir";
+    src: url("./fonts/Vrdznagir.otf");
+}
+
+body {
+    position: relative;
+    z-index: -999999999999;
+    background-image: url('./image/artsafphoto-40.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+#automusic {
+    background-image: url('./image/main.jpg');
+    height: 100vh;
+    background-size:  cover;
+    background-position: center;
+
+}
+
+.flags {
+    width: 30px;
+}
+
+.armenian_bttn {
+    background-image: url("./image/armenia.png");
+}
+
+.russian_bttn {
+    background-image: url("./image/russia.png");
+}
+
+.month_name {
+    font-family: "armhandwrite";
+    font-size: 30px;
+    color: #372d2d;;
+}
+
+button {
+    background-size: cover;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50% !important;
+    margin: 10px 5px !important;
+}
+
+.lang-switch {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#movingImage {
+    position: relative;
+    top: 70vh;
+    transition: left 1s ease;
+    color: black;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #e0dada;;
+    text-align: center;
+    line-height: 43px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.openInvi{
+    width: 500px;
+    position: relative;
+    top: 67vh;
+    margin: auto;
+    text-align: center;
+    font-family: 'armhandwrite';
+    font-weight: 600;
+    font-size: 40px;
+    color: #e0dada;
+}
+
+.dots{
+    position: relative;
+    top: 69vh;
+    font-size: 52px;
+    width: 310px;
+    text-align: center;
+    letter-spacing: 31px;
+    opacity: 0.8;
+    border-bottom: 10px dotted;
+    margin: 0 19px;
+}
+
+.shadoww {
+    height: 57px;
+    width: 57px;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    top: 70vh;
+    transform: rotate(-4deg);
+    opacity: 0.6;
+}
+    
+#arrow {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: #e0dada;;
+}
+
+p {
+    margin: 30px 0;
+}
+
+.header {
+    width: 100%;
+}
+
+.header-img {
+    margin-top: -50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-img img {
+    max-width: 462px;
+}
+
+.overlay-upper-fade-one, .overlay-upper-fade-second {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #b89e9e;
+}
+
+.overlay-upper-fade-one {
+    bottom: 99px;
+    background: linear-gradient(0deg, rgba(184, 158, 158, 1) 0%, rgba(184, 158, 158, 0.5) 100%);
+}
+
+.overlay-upper-fade-second {
+    bottom: 299px;
+    background: linear-gradient(0deg, rgba(184, 158, 158, 0.5) 0%, rgba(184, 158, 158, 0) 100%);
+}
+
+.overlay-bottom-fade-one, .overlay-bottom-fade-second {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100px;
+    background: #b89e9e;
+    top: -1px;
+}
+
+.overlay-bottom-fade-one {
+    background: linear-gradient(0deg, rgba(184, 158, 158, 0.5) 0%, rgba(184, 158, 158, 1) 100%);
+}
+
+.overlay-bottom-fade-second {
+    background: linear-gradient(0deg, rgba(184, 158, 158, 0) 0%, rgba(184, 158, 158, 0.5) 100%);
+}
+ 
+.hscd-content {
+    z-index: 3;
+    width: 100%;
+    display: inline;
+    position: absolute;
+    top: 38px;
+    color: white;
+    font-family: "armhandwrite";
+    font-weight: 500;
+    font-size: 41px;
+    text-align: center;
+    text-shadow: 3px 1px 2px rgba(179, 214, 185, 0.6);
+}
+
+.hscd-content p {
+    margin: auto;
+    border-bottom: 1px solid white;
+    width: 404px;
+    padding-bottom: 25px;
+}
+
+.hscd-content {
+    top: 440px;
+    font-weight: 300;
+}
+
+.timer {
+    margin-top: -200px;
+    font-family: "armhandwrite";
+    height: 170px;
+    width: 100%;
+    background: #B89E9E;
+    font-size: 39px;
+    text-shadow: 3px 3px 7px rgba(213, 229, 219, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 35%;
+    font-weight: 600;
+    text-shadow: 7px 4px 10px #7e6767;
+}
+
+.timer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer p {
+    height: 40px;
+}
+
+.tm-name {
+    font-size: 16px;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+    font-family: "Old Standard TT", serif;
+    font-weight: 300;
+}
+
+.main-box {
+    background: #d6c5c5a8;
+    width: 53%;
+    margin: -83px auto;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'MontserratARM', Arial, sans-serif;
+}
+
+.calendar-table {
+    border: 1px solid #6d6262;
+    border-radius: 18px;
+    margin-top: 20px;
+}
+
+.heart-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    animation: beat 1s infinite;
+}
+
+.heart-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.heart-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: #e0526d;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+@keyframes beat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+table {
+    width: 90%;
+    max-width: 600px;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+td {
+    height: 50px;
+}
+
+.main-img {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-img img {
+    width: 273px;
+    margin-left: -40%;
+    border-radius: 20px;
+}
+        
+.imgs.visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.imgs {
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.main-img img:nth-child(2) {
+    margin-left: 40%;
+}
+
+.main-img img:nth-child(2), .main-img img:nth-child(3) {
+    margin-top: -50px;
+}
+
+.text-box {
+    margin-top: 70px;
+    font-family: 'vrdznagir'; 
+    text-shadow: 2px 1px #c3b0b0b8;
+}
+
+.full-text {
+    text-align: center;
+}
+
+.text-h1, .schedule {
+    font-size: 40px;
+    color: #4a4952;
+    letter-spacing: 6px;
+}
+
+.scd-box {
+    width: 53%;
+    background : #d6c5c5a8;
+    border-radius: 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 30vh;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    font-family: 'vrdznagir';
+    text-shadow: 2px 1px #c3b0b0b8;
+}
+
+.sched-img {
+        width: 95px;
+    }
+
+.bride-home .sched-img {
+        width: 122px;
+}
+
+.schedule-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.schedule-content p {
+    margin: 0;
+}
+
+.schedule-content a {
+    margin-top: -10px;
+    color: #555555 !important;
+}
+
+.bride-home, .church, .party {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35px;
+    margin-bottom: 70px;
+}
+
+.church img, .party img {
+    margin-bottom: 15px;
+}
+
+.text2 {
+    width: 432px;
+    color: #555555;
+    font-size: 26px;
+    transform-origin: center center;
+    line-height: 30px;
+}
+
+.slide-in {
+    position: relative;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-in.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.schedule {
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1056px) {
+    .text-h1,
+    .schedule {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 987px) {
+    .text2 {
+        width: 380px;
+    }
+
+    .dots {
+        top: 69vh;
+    }
+
+    .main-img img {
+        width: 215px;
+    }
+
+    .bride-home,
+    .church,
+    .party {
+        font-size: 28px;
+    } 
+
+    .bride-home i,
+    .church i,
+    .party i {
+        font-size: 34px !important;
+    }
+
+    .bride-home .sched-img {
+        width: 110px;
+    }
+
+    .sched-img {
+        width: 85px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .img-main {
+        height: 497px;
+        width: 331px;
+        margin: 0 10px;
+    }
+
+    .hscd-content {
+        top: 405px;
+    }
+
+    .text2 {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 782px) {
+    body {
+        /* background-image: url('./image/artsafphoto-147.jpg'); */
+    }
+
+    .hscd-content {
+        top: 370px;
+    }
+
+    .timer{
+        height: 169px;
+        padding: 0 30%;
+        font-size: 33px;
+    }
+
+    .timer p {
+        margin-bottom: 0;
+    }
+
+    .main-box, .scd-box {
+        width: 68%;
+    }
+
+    .text-h1{
+        font-size: 32px;
+    }
+
+    .text2{
+        font-size: 21px;
+    }
+
+ }
+
+@media screen and (max-width: 672px) {
+    .timer{
+        font-size: 29px;
+    }
+
+    .tm-name{
+        font-size: 20px;
+    }
+
+    .main-box,
+    .scd-box {
+        width: 75%;
+    }
+
+    .text-h1 {
+        font-size: 30px;
+    }
+    
+    .text2 {
+        font-size: 20px;
+        width: 333px;
+    }
+
+}
+
+
+@media screen and (max-width: 580px) {
+    .timer {
+        height: 150px;
+        padding: 0 23%;
+    }
+
+    .timer div {
+        margin-right: 24px;
+    }
+    
+    .main-box,
+    .scd-box {
+        width: 85%;
+    }
+    
+    .text-h1 {
+        font-size: 26px;
+    }
+    
+    .text2 {
+        font-size: 22px;
+    }
+
+    .openInvi {
+        top: 66vh;
+        font-size: 36px;
+        width: 320px;
+    }
+
+    .dots {
+        top: 68vh;
+        width: 250px;
+    }
+
+    #movingImage, .shadoww {
+        top: 69vh;
+    }
+           
+}
+
+@media screen and (max-width: 463px) {
+    .header-img img {
+        width: 100%;
+    }
+
+    .hscd-content {
+        font-size: 28px;
+        top: 305px;
+    }
+
+    .hscd-content p {
+        width: 91vw;
+    }
+
+    .timer{
+        height: 140px;
+        font-size: 24px;
+        padding: 0px 15%;
+    }
+
+    .tm-name{
+        margin-top: -12px;
+    }
+    .timer div {
+        margin-right: 17px;
+    }
+
+    .main-box,
+    .scd-box {
+        width: 90%;
+    }
+
+    .scd-box {
+        margin-top: 17vh;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    .text2 {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .main-img img {
+        width: 180px;
+    }
+
+    .schedule-content p {
+        margin-bottom: -5px;
+    }
+    
+    .bride-home,
+    .church,
+    .party {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    .sched-img {
+         width: 70px;
+    }
+
+    .bride-home .sched-img {
+        width: 93px;
+    }
+
+    .bride-home i,
+    .church i,
+    .party i {
+        font-size: 22px !important;
+    }
+
+    .openInvi {
+        top: 70vh;
+        font-size: 26px;
+    }
+
+    #arrow {
+        margin-top: 25px;
+    }
+
+    #movingImage, .shadoww {
+        top: 68vh;
+    }   
+
+    .dots {
+        top: 67vh;
+        width: 184px;
+        border-bottom: 5px dotted;
+    }
+
+} 
