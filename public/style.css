@@ -589,7 +589,7 @@ td {
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
             background-size: cover;
         /* background-image: url('./image/artsafphoto-38.jpg') !important; */
-        /* background-attachment: fixed; */
+        background-attachment: fixed;
         /* background-size: cover; */
         /* background-position: center; */
         /* background-repeat: no-repeat; */
