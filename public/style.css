@@ -11,12 +11,22 @@
 body {
     position: relative;
     z-index: -999999999999;
-    background-image: url('./image/artsafphoto-40.jpg');
+    /* background-image: url('./image/artsafphoto-40.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     
+}
+
+#full {
+    position: relative;
+        z-index: -999999999999;
+    background-image: url('./image/artsafphoto-40.jpg');
+    background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 }
 
 .slider-background {
@@ -584,12 +594,19 @@ td {
 }
 
 @media screen and (max-width: 782px) {
-    body {
+    /* body {
         background-image: url('./image/WhatsApp\ Image\ 2025-04-27\ at\ 23.00.01_b4d98f29.jpg') !important;
         background-size: cover !important;
         background-position: center !important;
         width: 100% !important;
-    }
+    } */
+
+        #full {
+        background-image: url('./image/WhatsApp\ Image\ 2025-04-27\ at\ 23.00.01_b4d98f29.jpg') !important;            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
 
     .hscd-content {
         top: 370px;
