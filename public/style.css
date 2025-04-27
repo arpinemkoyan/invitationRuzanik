@@ -586,11 +586,13 @@ td {
 
 @media screen and (max-width: 782px) {
     body {
-        background-image: url('./image/Screenshot\ 2025-04-27\ 232359.png') !important;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        background: url('./image/artsafphoto-38.jpg') no-repeat center center;
+            background-size: cover;
+        /* background-image: url('./image/artsafphoto-38.jpg') !important; */
+        /* background-attachment: fixed; */
+        /* background-size: cover; */
+        /* background-position: center; */
+        /* background-repeat: no-repeat; */
     }
 
     .hscd-content {
