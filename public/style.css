@@ -586,6 +586,8 @@ td {
 @media screen and (max-width: 782px) {
     body {
         background-image: url('./image/artsafphoto-38.jpg');
+        background-size: cover;
+        background-position: center;
     }
 
     .hscd-content {
