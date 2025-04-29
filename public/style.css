@@ -589,9 +589,10 @@ td {
         position: relative;
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
         background-size: cover;
-        /* background-attachment: scroll; */
         background-attachment: fixed;
-            /* fix for iPhone */
+        background-attachment: scroll;
+
+        /* fix for iPhone */
         
             /* iPhone hack */
             -webkit-overflow-scrolling: touch;
