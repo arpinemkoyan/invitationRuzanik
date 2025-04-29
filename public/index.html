@@ -23,205 +23,210 @@
 </head>
 
 <body>
-  <div id="full" class="background-video-container" style="display: none">
-    <!-- <video autoplay muted loop playsinline class="background-video">
+  <div class="background-image"></div>
+  <div class="full">
+
+    <div id="full" class="background-video-container" style="display: none">
+      <!-- <video autoplay muted loop playsinline class="background-video">
         <source src="./video/fabric.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video> -->
-    <div class="content">
-      <div class="lang-switch">
-        <button class="armenian_bttn" onclick="setLang('hy')"></button>
-        <button class="russian_bttn" onclick="setLang('ru')"></button>
+      <div class="content">
+        <div class="lang-switch">
+          <button class="armenian_bttn" onclick="setLang('hy')"></button>
+          <button class="russian_bttn" onclick="setLang('ru')"></button>
+        </div>
+
+        <!-- header -->
+        <div class="header">
+          <div class="header-img">
+            <img src="./image/artsafphoto-26.jpg" />
+          </div>
+          <div class="hscd-content">
+            <p data-key="names"></p>
+          </div>
+          <div>
+            <div class="overlay-upper-fade-one"></div>
+            <div class="overlay-upper-fade-second"></div>
+
+            <div class="timer">
+              <div class="days">
+                <p id="days"></p>
+                <p class="tm-name" data-key="days"></p>
+              </div>
+              <div class="hours">
+                <p id="hours"></p>
+                <p class="tm-name" data-key="times"></p>
+              </div>
+              <div class="minutes">
+                <p id="minutes"></p>
+                <p class="tm-name" data-key="minutes"></p>
+              </div>
+              <div class="seconds">
+                <p id="seconds"></p>
+                <p class="tm-name" data-key="seconds"></p>
+              </div>
+            </div>
+            <div class="overlay-bottom-fade-one"></div>
+            <div class="overlay-bottom-fade-second"></div>
+          </div>
+        </div>
+
+        <!-- main text -->
+        <div class="main-box">
+          <div class="main-text">
+            <div class="calendar-table">
+              <table cellspacing="0" cellpadding="8">
+                <thead>
+                  <tr>
+                    <th class="month_name" colspan="7" data-key="month"></th>
+                  </tr>
+                  <tr>
+                    <th data-key="sun"></th>
+                    <th data-key="mon"></th>
+                    <th data-key="tue"></th>
+                    <th data-key="wed"></th>
+                    <th data-key="thu"></th>
+                    <th data-key="fri"></th>
+                    <th data-key="sat"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <div class="heart-container">
+                        <img src="./image/heart.png" alt="heart" class="heart-img" />
+                        <span class="heart-number">7</span>
+                      </div>
+                    </td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <td>27</td>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="text-box">
+              <div class="full-text">
+                <p class="text-h1" data-key="darlings"></p>
+                <p class="text2" data-key="text"></p>
+              </div>
+            </div>
+          </div>
+          <div class="main-img">
+            <img class="fst-img imgs" src="./image/artsafphoto-204.jpg" />
+            <img class="img-scd imgs" src="./image/artsafphoto-147.jpg" />
+            <img class="img-three imgs" src="./image/artsafphoto-203.jpg" />
+
+          </div>
+        </div>
+
+        <!-- schedule  -->
+        <div class="scd-box">
+          <p class="schedule" data-key="schedule"></p>
+          <div class="schedule-content">
+            <div class="bride-home">
+              <img class="sched-img slide-in" src="./image/flower.png" />
+              <p class="slide-in">11։00</p>
+              <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
+                <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
+                <span data-key="bride_home"></span>
+              </a>
+            </div>
+            <div class="church">
+              <img class="sched-img slide-in" src="./image/church.png" />
+              <p class="slide-in">14։00</p>
+              <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
+                <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
+                <span data-key="church"></span>
+              </a>
+            </div>
+            <div class="party">
+              <img class="sched-img slide-in" src="./image/cheers.png" />
+              <p class="slide-in">17։00</p>
+              <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
+                <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
+                <span data-key="party"></span>
+              </a>
+            </div>
+          </div>
+          <div class="slider-background">
+            <div class="slider-container">
+              <div class="slider">
+                <div class="slide"><img src="./image/artsafphoto-17.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="./image/artsafphoto-189.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="./image/artsafphoto-147.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="./image/artsafphoto-97.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="./image/artsafphoto-148.jpg" alt="Image 5"></div>
+              </div>
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div id="automusic">
+      <audio id="backgroundMusic" loop autoplay>
+        <source src="./music/videoplayback.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
 
-      <!-- header -->
-      <div class="header">
-        <div class="header-img">
-          <img src="./image/artsafphoto-26.jpg" />
+      <div class="content">
+        <div class="lang-switch">
+          <button class="armenian_bttn" onclick="setLang('hy')"></button>
+          <button class="russian_bttn" onclick="setLang('ru')"></button>
         </div>
-        <div class="hscd-content">
-          <p data-key="names"></p>
-        </div>
-        <div>
-          <div class="overlay-upper-fade-one"></div>
-          <div class="overlay-upper-fade-second"></div>
-
-          <div class="timer">
-            <div class="days">
-              <p id="days"></p>
-              <p class="tm-name" data-key="days"></p>
-            </div>
-            <div class="hours">
-              <p id="hours"></p>
-              <p class="tm-name" data-key="times"></p>
-            </div>
-            <div class="minutes">
-              <p id="minutes"></p>
-              <p class="tm-name" data-key="minutes"></p>
-            </div>
-            <div class="seconds">
-              <p id="seconds"></p>
-              <p class="tm-name" data-key="seconds"></p>
-            </div>
-          </div>
-          <div class="overlay-bottom-fade-one"></div>
-          <div class="overlay-bottom-fade-second"></div>
-        </div>
-      </div>
-
-      <!-- main text -->
-      <div class="main-box">
-        <div class="main-text">
-          <div class="calendar-table">
-            <table cellspacing="0" cellpadding="8">
-              <thead>
-                <tr>
-                  <th class="month_name" colspan="7" data-key="month"></th>
-                </tr>
-                <tr>
-                  <th data-key="sun"></th>
-                  <th data-key="mon"></th>
-                  <th data-key="tue"></th>
-                  <th data-key="wed"></th>
-                  <th data-key="thu"></th>
-                  <th data-key="fri"></th>
-                  <th data-key="sat"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
-                  <td>4</td>
-                  <td>5</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>
-                    <div class="heart-container">
-                      <img src="./image/heart.png" alt="heart" class="heart-img" />
-                      <span class="heart-number">7</span>
-                    </div>
-                  </td>
-                  <td>8</td>
-                  <td>9</td>
-                  <td>10</td>
-                  <td>11</td>
-                  <td>12</td>
-                </tr>
-                <tr>
-                  <td>13</td>
-                  <td>14</td>
-                  <td>15</td>
-                  <td>16</td>
-                  <td>17</td>
-                  <td>18</td>
-                  <td>19</td>
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td>21</td>
-                  <td>22</td>
-                  <td>23</td>
-                  <td>24</td>
-                  <td>25</td>
-                  <td>26</td>
-                </tr>
-                <tr>
-                  <td>27</td>
-                  <td>28</td>
-                  <td>29</td>
-                  <td>30</td>
-                  <td>31</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="text-box">
-            <div class="full-text">
-              <p class="text-h1" data-key="darlings"></p>
-              <p class="text2" data-key="text"></p>
-            </div>
-          </div>
-        </div>
-        <div class="main-img">
-          <img class="fst-img imgs" src="./image/artsafphoto-204.jpg" />
-          <img class="img-scd imgs" src="./image/artsafphoto-147.jpg" />
-          <img class="img-three imgs" src="./image/artsafphoto-203.jpg" />
-
-        </div>
-      </div>
-
-      <!-- schedule  -->
-      <div class="scd-box">
-        <p class="schedule" data-key="schedule"></p>
-        <div class="schedule-content">
-          <div class="bride-home">
-            <img class="sched-img slide-in" src="./image/flower.png" />
-            <p class="slide-in">11։00</p>
-            <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
-              <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
-              <span data-key="bride_home"></span>
-            </a>
-          </div>
-          <div class="church">
-            <img class="sched-img slide-in" src="./image/church.png" />
-            <p class="slide-in">14։00</p>
-            <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
-              <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
-              <span data-key="church"></span>
-            </a>
-          </div>
-          <div class="party">
-            <img class="sched-img slide-in" src="./image/cheers.png" />
-            <p class="slide-in">17։00</p>
-            <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
-              <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
-              <span data-key="party"></span>
-            </a>
-          </div>
-        </div>
-        <div class="slider-background">
-          <div class="slider-container">
-            <div class="slider">
-              <div class="slide"><img src="./image/artsafphoto-17.jpg" alt="Image 1"></div>
-              <div class="slide"><img src="./image/artsafphoto-189.jpg" alt="Image 2"></div>
-              <div class="slide"><img src="./image/artsafphoto-147.jpg" alt="Image 3"></div>
-              <div class="slide"><img src="./image/artsafphoto-97.jpg" alt="Image 4"></div>
-              <div class="slide"><img src="./image/artsafphoto-148.jpg" alt="Image 5"></div>
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-          </div>
+        <!-- Play button -->
+        <p class="openInvi" data-key="open_invitation"></p>
+        <div id="arrow">
+          <p id="movingImage">></p>
+          <p class="dots"></p>
+          <p class="shadoww"></p>
         </div>
       </div>
     </div>
   </div>
-  <div id="automusic">
-    <audio id="backgroundMusic" loop autoplay>
-      <source src="./music/videoplayback.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
 
-    <div class="content">
-      <div class="lang-switch">
-        <button class="armenian_bttn" onclick="setLang('hy')"></button>
-        <button class="russian_bttn" onclick="setLang('ru')"></button>
-      </div>
-      <!-- Play button -->
-      <p class="openInvi" data-key="open_invitation"></p>
-      <div id="arrow">
-        <p id="movingImage">></p>
-        <p class="dots"></p>
-        <p class="shadoww"></p>
-      </div>
-    </div>
-  </div>
 </body>
 
 <script>
