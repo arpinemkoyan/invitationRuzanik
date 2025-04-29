@@ -594,7 +594,7 @@ td {
         
             /* iPhone hack */
             -webkit-overflow-scrolling: touch;
-            overflow: hidden;
+            /* overflow: hidden; */
     }
 
     .hscd-content {
