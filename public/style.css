@@ -585,21 +585,21 @@ td {
 }
 
 @media screen and (max-width: 782px) {
-    /* body {
+    body {
         position: relative;
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
         background-size: cover;
-        background-attachment: scroll;
+        /* background-attachment: scroll; */
         background-attachment: fixed;
-            /* fix for iPhone /
+            /* fix for iPhone */
         
-            /* iPhone hack *
+            /* iPhone hack */
             -webkit-overflow-scrolling: touch;
             overflow-x: hidden;
         
-    } */
+    }
 
-        body {
+        /* body {
             margin: 0;
             padding: 0;
             overflow-x: hidden;
@@ -616,7 +616,7 @@ td {
                     background: url('./image/artsafphoto-38.jpg') no-repeat center center;
                     background-size: cover;
                     z-index: -1;
-                }
+                } */
     
 
     .hscd-content {
