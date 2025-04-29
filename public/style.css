@@ -589,15 +589,22 @@ td {
         position: relative;
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
         background-size: cover;
-        background-attachment: scroll;
+        /* background-attachment: scroll; */
         background-attachment: fixed;
             /* fix for iPhone */
         
             /* iPhone hack */
-            -webkit-overflow-scrolling: touch;
-            overflow-x: hidden;
+            /* -webkit-overflow-scrolling: touch; */
+            /* overflow-x: hidden; */
         
     }
+
+        @supports (-webkit-touch-callout: none) {
+            body {
+                -webkit-overflow-scrolling: touch;
+                    overflow-x: hidden;
+                background-attachment: scroll;
+            }
 
     .hscd-content {
         top: 370px;
