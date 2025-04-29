@@ -585,39 +585,44 @@ td {
 }
 
 @media screen and (max-width: 782px) {
-    body {
+    /* body {
         position: relative;
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
         background-size: cover;
         background-attachment: scroll;
-        background-attachment: fixed;
+        background-attachment: fixed; */
 
         /* fix for iPhone */
         
             /* iPhone hack */
-            -webkit-overflow-scrolling: touch;
+            /* -webkit-overflow-scrolling: touch;
             overflow-x: hidden;
         
-    }
+    } */
 
-        /* body {
+
+
+        /* Reset and body styling */
+        body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            font-family: sans-serif;
             position: relative;
             z-index: 0;
         }
-                body::before {
-                    content: "";
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100vw;
-                    height: 100vh;
-                    background: url('./image/artsafphoto-38.jpg') no-repeat center center;
-                    background-size: cover;
-                    z-index: -1;
-                } */
+    
+        /* Fixed full-screen background image */
+        body::before {
+            content: "";
+            position: fixed;
+            /* This is the trick */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('your-image.jpg') no-repeat center center / cover;
+            z-index: -1;
+        }
     
 
     .hscd-content {
