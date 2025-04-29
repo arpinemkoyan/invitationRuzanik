@@ -587,12 +587,14 @@ td {
 @media screen and (max-width: 782px) {
     body {
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
-            background-size: cover;
-        /* background-image: url('./image/artsafphoto-38.jpg') !important; */
+        background-size: cover;
         background-attachment: fixed;
-        /* background-size: cover; */
-        /* background-position: center; */
-        /* background-repeat: no-repeat; */
+        background-attachment: scroll;
+            /* fix for iPhone */
+        
+            /* iPhone hack */
+            -webkit-overflow-scrolling: touch;
+            overflow: hidden;
     }
 
     .hscd-content {
