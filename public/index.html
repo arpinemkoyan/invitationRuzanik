@@ -20,11 +20,42 @@
     rel="stylesheet" />
 
   <link rel="icon" href="./image/love-letter.png" sizes="32x32" type="image/png" />
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=Your API key&lang=en_US" type="text/javascript">
+    </script> -->
+
 </head>
 
 <body>
   <div class="background-image"></div>
   <div class="full">
+    <div id="automusic">
+      <audio id="backgroundMusic" loop autoplay>
+        <source src="./music/A-Thousand-Years-by-Christina-Perri-Violin-Cover-Joel-Graing.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <div class="content">
+        <div class="lang-switch">
+          <button class="armenian_bttn" onclick="setLang('hy')"></button>
+          <button class="russian_bttn" onclick="setLang('ru')"></button>
+        </div>
+        <!-- Play button -->
+        <div class="unlock-screen" id="unlockScreen">
+          <p class="openInvi" data-key="open_invitation"></p>
+          <div class="slider-container1" id="slider1">
+
+            <div id="arrow">
+              <div class="slider-button" id="sliderBtn">
+                <p id="movingImage">></p>
+              </div>
+              <p class="dots"></p>
+              <p class="shadoww"></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="full" style="display: none">
       <div class="content">
         <div class="lang-switch">
@@ -148,9 +179,9 @@
             </div>
           </div>
           <div class="main-img">
-            <img class="fst-img imgs" src="./image/artsafphoto-204.jpg" loading="lazy"/>
-            <img class="img-scd imgs" src="./image/artsafphoto-189.jpg" loading="lazy"/>
-            <img class="img-three imgs" src="./image/artsafphoto-203.jpg" loading="lazy"/>
+            <img class="fst-img imgs" src="./image/artsafphoto-204.jpg" loading="lazy" />
+            <img class="img-scd imgs" src="./image/artsafphoto-189.jpg" loading="lazy" />
+            <img class="img-three imgs" src="./image/artsafphoto-203.jpg" loading="lazy" />
 
           </div>
         </div>
@@ -160,15 +191,15 @@
           <p class="schedule" data-key="schedule"></p>
           <div class="schedule-content">
             <div class="bride-home">
-              <img class="sched-img slide-in" src="./image/flower.png" loading="lazy"/>
-              <p class="sch_tm slide-in" >11։00</p>
+              <img class="sched-img slide-in" src="./image/flower.png" loading="lazy" />
+              <p class="sch_tm slide-in">11։00</p>
               <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
                 <span data-key="bride_home"></span>
               </a>
             </div>
             <div class="church">
-              <img class="sched-img slide-in" src="./image/church.png" loading="lazy"/>
+              <img class="sched-img slide-in" src="./image/church.png" loading="lazy" />
               <p class="sch_tm slide-in">14։00</p>
               <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
@@ -176,7 +207,7 @@
               </a>
             </div>
             <div class="party">
-              <img class="sched-img slide-in" src="./image/cheers.png" loading="lazy"/>
+              <img class="sched-img slide-in" src="./image/cheers.png" loading="lazy" />
               <p class="sch_tm slide-in">17։00</p>
               <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
@@ -196,43 +227,22 @@
             </div>
           </div>
         </div>
+
+        <!-- locations -->
+         <div class="locations">
+          <p data-key="get_route"></p>
+        <div ><a
+            href="https://yandex.com/navi/35/krasnodar/?utm_medium=mapframe&utm_source=maps"
+            style="color:#eee;font-size:12px;position:absolute;top:0px;">Krasnodar</a><a
+            href="https://yandex.com/navi/35/krasnodar/?ll=38.994877%2C45.084856&mode=routes&rtext=45.081037%2C39.031012~45.064663%2C38.959312~45.094614%2C39.008545&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNwR8cQhX8UjRC~ymapsbm1%3A%2F%2Forg%3Foid%3D1006355682~ymapsbm1%3A%2F%2Forg%3Foid%3D239146648400&utm_medium=mapframe&utm_source=maps&z=13.42"
+            style="color:#eee;font-size:12px;position:absolute;top:14px;">Yandex Maps</a><iframe
+            src="https://yandex.com/map-widget/v1/?ll=38.994877%2C45.084856&mode=routes&rtext=45.081037%2C39.031012~45.064663%2C38.959312~45.094614%2C39.008545&rtt=auto&ruri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DIgoNwR8cQhX8UjRC~ymapsbm1%3A%2F%2Forg%3Foid%3D1006355682~ymapsbm1%3A%2F%2Forg%3Foid%3D239146648400&z=13.42"
+            width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+         </div>
       </div>
     </div>
   </div>
-  <div id="automusic">
-    <audio id="backgroundMusic" loop autoplay>
-      <source src="./music/A-Thousand-Years-by-Christina-Perri-Violin-Cover-Joel-Graing.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
 
-    <div class="content">
-      <div class="lang-switch">
-        <button class="armenian_bttn" onclick="setLang('hy')"></button>
-        <button class="russian_bttn" onclick="setLang('ru')"></button>
-      </div>
-      <!-- Play button -->
-      <div class="unlock-screen" id="unlockScreen">
-        <p class="openInvi" data-key="open_invitation"></p>      
-        <div class="slider-container1" id="slider1">
-
-          <div id="arrow">
-            <div class="slider-button" id="sliderBtn">
-              <p id="movingImage">></p>
-            </div>
-            <p class="dots"></p>
-            <p class="shadoww"></p>
-          </div> 
-
-        </div>
-      </div>
-      <!-- <p class="openInvi" data-key="open_invitation"></p>
-        <div id="arrow">
-          <p id="movingImage">></p>
-          <p class="dots"></p>
-          <p class="shadoww"></p>
-        </div> -->
-    </div>
-  </div>
 
 </body>
 
@@ -259,6 +269,7 @@
       thu: "Հի",
       fri: "Ու",
       sat: "Շա",
+      get_route: "Ինչպե՞ս հասնել",
     },
 
     ru: {
@@ -282,6 +293,7 @@
       thu: "Чт",
       fri: "Пт",
       sat: "Сб",
+      get_route: "Как добраться?"
     },
   };
 
@@ -289,7 +301,7 @@
     document.querySelectorAll("[data-key]").forEach((el) => {
       const key = el.getAttribute("data-key");
       el.textContent = translations[lang][key];
-      if (lang == 'ru'){
+      if (lang == 'ru') {
         document.getElementsByClassName("hscd-content")[0].style.fontFamily = "russian";
         document.getElementsByClassName("month_name")[0].style.fontFamily = "russian_regular";
         document.getElementsByClassName("openInvi")[0].style.fontFamily = "russian_regular";
@@ -300,6 +312,7 @@
       }
     });
   }
+
   document.addEventListener("DOMContentLoaded", () => setLang("hy"));
   const endTime = new Date("July 7, 2025 12:00:00");
 
@@ -329,36 +342,6 @@
     document.getElementById("minutes").innerHTML = minutes;
     document.getElementById("seconds").innerHTML = seconds;
   }
-  // Update the timer every second
-  const x = setInterval(updateTimer, 1000);
-  // Initial call to display the timer immediately on page load
-  updateTimer();
-  var audio = document.getElementById("backgroundMusic");
-  // document
-  //   .getElementById("movingImage")
-  //   .addEventListener("click", function () {
-  //     audio.play().catch(function (error) {
-  //       console.error("Audio playback failed:", error);
-  //     });
-  //     if (window.innerWidth <= 463) {
-  //       this.style.left = "276px";
-  //     } else if (window.innerWidth > 463 && window.innerWidth <= 580) {
-  //       this.style.left = "342px";
-  //     } else {
-  //       this.style.left = "402px";
-  //     }
-  //     setTimeout(() => {
-        
-  //       // document.getElementById("automusic").style.display = "none";
-  //       // document.getElementById("full").style.display = "block";
-  //     }, 2000); // 5000 milliseconds = 5 seconds
-  //     observeImages();
-  //     slideIn();
-  //   });
-  observeImages();
-  slideIn();
-  slideImgs();
-  slideArrow();
 
   function observeImages() {
     const images = document.querySelectorAll(".imgs");
@@ -404,100 +387,109 @@
   }
 
   function slideImgs() {
-      const slider = document.querySelector('.slider');
-      const slides = document.querySelectorAll('.slide');
-      const prevBtn = document.querySelector('.prev');
-      const nextBtn = document.querySelector('.next');
-      const sliderContainer = document.querySelector('.slider-container');
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const sliderContainer = document.querySelector('.slider-container');
 
-      let currentIndex = 0; // Tracks the current slide index
-      let autoSlideInterval; // Will hold the interval ID for auto-sliding
+    let currentIndex = 0; // Tracks the current slide index
+    let autoSlideInterval; // Will hold the interval ID for auto-sliding
 
-      // Function to display a specific slide based on the index
-      function showSlides(index) {
-        if (index >= slides.length) {
-          currentIndex = 0; // Reset to first slide if at the end
-        } else if (index < 0) {
-          currentIndex = slides.length - 1; // Go to last slide if at the beginning
-        } else {
-          currentIndex = index; // Otherwise, set to the provided index
-        }
-        slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide transition
+    // Function to display a specific slide based on the index
+    function showSlides(index) {
+      if (index >= slides.length) {
+        currentIndex = 0; // Reset to first slide if at the end
+      } else if (index < 0) {
+        currentIndex = slides.length - 1; // Go to last slide if at the beginning
+      } else {
+        currentIndex = index; // Otherwise, set to the provided index
       }
-
-      // Function to move to the next slide
-      function nextSlide() {
-        showSlides(currentIndex + 1);
-      }
-
-      // Function to move to the previous slide
-      function prevSlide() {
-        showSlides(currentIndex - 1);
-      }
-
-      // Start the automatic sliding of images
-      function startAutoSlide() {
-        autoSlideInterval = setInterval(nextSlide, 4000); // Slide every 4 seconds
-      }
-
-      // Stop the automatic sliding
-      function stopAutoSlide() {
-        clearInterval(autoSlideInterval); // Clear the interval
-      }
-
-      // Add event listeners for navigation buttons
-      nextBtn.addEventListener('click', nextSlide);
-      prevBtn.addEventListener('click', prevSlide);
-
-      // Stop auto-slide when the mouse enters the slider container
-      sliderContainer.addEventListener('mouseover', stopAutoSlide);
-
-      // Restart auto-slide when the mouse leaves the slider container
-      sliderContainer.addEventListener('mouseout', startAutoSlide);
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide transition
     }
 
-    function slideArrow() {
-      const slider1 = document.getElementById("slider1");
-      const button = document.getElementById("sliderBtn");
-      // const unlockScreen = document.getElementById("unlockScreen");
-      // const invitationContent = document.getElementById("invitationContent");
+    // Function to move to the next slide
+    function nextSlide() {
+      showSlides(currentIndex + 1);
+    }
 
-      let isDragging = false;
-      let startX = 0;
-      let currentX = 0;
+    // Function to move to the previous slide
+    function prevSlide() {
+      showSlides(currentIndex - 1);
+    }
 
-      button.addEventListener("touchstart", (e) => {
-        isDragging = true;
-        startX = e.touches[0].clientX;
-      });
+    // Start the automatic sliding of images
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(nextSlide, 4000); // Slide every 4 seconds
+    }
 
-      button.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
-        currentX = e.touches[0].clientX - startX;
-        const max = slider1.offsetWidth - button.offsetWidth;
-        if (currentX < 0) currentX = 0;
-        if (currentX > max) currentX = max;
-        button.style.left = currentX + "px";
-      });
+    // Stop the automatic sliding
+    function stopAutoSlide() {
+      clearInterval(autoSlideInterval); // Clear the interval
+    }
 
-      button.addEventListener("touchend", () => {
-        isDragging = false;
-        const max = slider1.offsetWidth - button.offsetWidth;
-        if (currentX >= max - 10) {
-          // Slide complete
-          document.getElementById("automusic").style.display = "none";
-          document.getElementById("full").style.display = "block";
-          audio.play().catch(function (error) {
-                console.error("Audio playback failed:", error);
-              });
-          // unlockScreen.style.display = "none";
-          // invitationContent.style.display = "block";
-        } else {
-          // Slide not complete - reset
-          button.style.left = "0px";
-        }
-      });
-    }  
+    // Add event listeners for navigation buttons
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Stop auto-slide when the mouse enters the slider container
+    sliderContainer.addEventListener('mouseover', stopAutoSlide);
+
+    // Restart auto-slide when the mouse leaves the slider container
+    sliderContainer.addEventListener('mouseout', startAutoSlide);
+  }
+
+  var audio = document.getElementById("backgroundMusic");
+
+  function slideArrow() {
+    const slider1 = document.getElementById("slider1");
+    const button = document.getElementById("sliderBtn");
+
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+
+    button.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+    });
+
+    button.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
+      currentX = e.touches[0].clientX - startX;
+      const max = slider1.offsetWidth - button.offsetWidth;
+      if (currentX < 0) currentX = 0;
+      if (currentX > max) currentX = max;
+      button.style.left = currentX + "px";
+    });
+
+    button.addEventListener("touchend", () => {
+      isDragging = false;
+      const max = slider1.offsetWidth - button.offsetWidth;
+      if (currentX >= max - 10) {
+        // Slide complete
+        document.getElementById("automusic").style.display = "none";
+        document.getElementById("full").style.display = "block";
+        audio.play().catch(function (error) {
+          console.error("Audio playback failed:", error);
+        });
+      } else {
+        // Slide not complete - reset
+        button.style.left = "0px";
+      }
+    });
+  }
+
+  // Update the timer every second
+  const x = setInterval(updateTimer, 1000);
+
+  // Initial call to display the timer immediately on page load
+  updateTimer();
+  observeImages();
+  slideIn();
+  slideImgs();
+  slideArrow();
+
 </script>
 
 </html>

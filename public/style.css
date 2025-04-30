@@ -8,8 +8,6 @@
     src: url("./fonts/Vrdznagir.otf");
 }
 
-
-
 @font-face {
     font-family: "russian";
     src: url('./fonts/Azbuka03_D.ttf')
@@ -161,7 +159,6 @@ button {
 
 #movingImage {
     position: relative;
-    /* top: 70vh; */
     transition: left 1s ease;
     color: black;
     border: 1px solid;
@@ -179,18 +176,15 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 100vh; */
 }
 
 .slider-container1 {
     margin: 2rem auto 0;
     width: 70%;
-    /* height: 56px; */
-    /* background: #ddd; */
     border-radius: 25px;
     position: relative;
     overflow: hidden;
-    top: 63vh;
+    top: 65vh;
 }
 
 .slider-button {
@@ -220,14 +214,14 @@ button {
 
 .dots{
     position: relative;
-    /* top: 69vh; */
     font-size: 52px;
-    width: 310px;
+    width: 44%;
     text-align: center;
     letter-spacing: 31px;
     opacity: 0.8;
     border-bottom: 10px dotted;
-    margin: 0 19px;
+    margin: -13px 20% 0;
+    color: #5d5353;
 }
 
 .shadoww {
@@ -236,7 +230,6 @@ button {
     border: 3px solid white;
     border-radius: 50%;
     position: relative;
-    /* top: 70vh; */
     transform: rotate(-4deg);
     opacity: 0.6;
 }
@@ -248,10 +241,6 @@ button {
     align-items: center;
     justify-content: flex-end;
     color: #e0dada;;
-}
-
-p {
-    margin: 30px 0;
 }
 
 .header {
@@ -484,7 +473,7 @@ td {
     width: 100%;
 }
 
-.text-h1, .schedule {
+.text-h1, .schedule, .locations p {
     font-size: 40px;
     color: #4a4952;
     letter-spacing: 6px;
@@ -570,9 +559,28 @@ td {
     font-weight: 700;
 }
 
+.locations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #d6c5c5a8;
+    margin: auto;
+    border-radius: 26px;
+    margin-top: 10vh;
+    padding: 30px 0;
+}
+
+.locations div {
+    position: relative;
+    overflow: hidden;
+    width: 70%;
+}
+
 @media screen and (max-width: 1056px) {
     .text-h1,
-    .schedule {
+    .schedule,
+    .locations p {
         font-size: 35px;
     }
 }
@@ -580,10 +588,6 @@ td {
 @media screen and (max-width: 987px) {
     .text2 {
         width: 380px;
-    }
-
-    .dots {
-        /* top: 69vh; */
     }
 
     .main-img img {
@@ -670,7 +674,7 @@ td {
         margin-bottom: 0;
     }
 
-    .main-box, .scd-box {
+    .main-box, .scd-box, .locations {
         width: 68%;
     }
 
@@ -702,7 +706,8 @@ td {
     }
 
     .main-box,
-    .scd-box {
+    .scd-box,
+    .locations {
         width: 75%;
     }
 
@@ -713,6 +718,10 @@ td {
     .text2 {
         font-size: 20px;
         width: 333px;
+    }
+
+    .dots {
+        color: unset;
     }
 
 }
@@ -729,7 +738,8 @@ td {
     }
     
     .main-box,
-    .scd-box {
+    .scd-box,
+    .locations {
         width: 85%;
     }
     
@@ -744,16 +754,10 @@ td {
     .openInvi {
         top: 66vh;
         font-size: 36px;
-        /* width: 320px; */
     }
 
     .dots {
-        /* top: 68vh; */
-        width: 250px;
-    }
-
-    #movingImage, .shadoww {
-        /* top: 69vh; */
+        margin-right: 13%;
     }
            
 }
@@ -765,7 +769,7 @@ td {
 
     .hscd-content {
         font-size: 39px;
-        top: 582px;
+        top: 460px;
     }
 
     .hscd-content p {
@@ -786,7 +790,8 @@ td {
     }
 
     .main-box,
-    .scd-box {
+    .scd-box,
+    .locations {
         width: 90%;
     }
 
@@ -808,7 +813,7 @@ td {
     }
 
     .schedule-content p {
-        margin-bottom: -5px;
+        margin-bottom: 7px;
     }
     
     .bride-home,
@@ -840,14 +845,9 @@ td {
     #arrow {
         margin-top: 25px;
     }
-
-    #movingImage, .shadoww {
-        /* top: 68vh; */
-    }   
-
+    
     .dots {
-        /* top: 67vh; */
-        width: 184px;
+        margin: -10px 7% 0;
         border-bottom: 5px dotted;
     }
 
