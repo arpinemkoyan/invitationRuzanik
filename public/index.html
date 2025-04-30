@@ -301,7 +301,9 @@
     document.querySelectorAll("[data-key]").forEach((el) => {
       const key = el.getAttribute("data-key");
       el.textContent = translations[lang][key];
+      console.log(lang);
       if (lang == 'ru') {
+        console.log('llllll');
         document.getElementsByClassName("hscd-content")[0].style.fontFamily = "russian";
         document.getElementsByClassName("month_name")[0].style.fontFamily = "russian_regular";
         document.getElementsByClassName("openInvi")[0].style.fontFamily = "russian_regular";
@@ -309,6 +311,16 @@
         document.getElementsByClassName("main-text")[0].style.fontFamily = "russian_regular";
         document.getElementsByClassName("text-box")[0].style.fontFamily = "russian_regular";
         document.getElementsByClassName("scd-box")[0].style.fontFamily = "russian_regular";
+      }
+      else {
+        console.log('...........');
+        document.getElementsByClassName("hscd-content")[0].style.fontFamily = "armhandwrite";
+        document.getElementsByClassName("month_name")[0].style.fontFamily = "armhandwrite";
+        document.getElementsByClassName("openInvi")[0].style.fontFamily = "armhandwrite";
+        document.getElementsByClassName("timer")[0].style.fontFamily = "armhandwrite";
+        document.getElementsByClassName("main-text")[0].style.fontFamily = "armhandwrite";
+        document.getElementsByClassName("text-box")[0].style.fontFamily = "vrdznagir";
+        document.getElementsByClassName("scd-box")[0].style.fontFamily = "vrdznagir";
       }
     });
   }
