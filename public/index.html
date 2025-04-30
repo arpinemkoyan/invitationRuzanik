@@ -25,12 +25,7 @@
 <body>
   <div class="background-image"></div>
   <div class="full">
-
-    <div id="full" class="background-video-container" style="display: none">
-      <!-- <video autoplay muted loop playsinline class="background-video">
-        <source src="./video/fabric.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video> -->
+    <div id="full" style="display: none">
       <div class="content">
         <div class="lang-switch">
           <button class="armenian_bttn" onclick="setLang('hy')"></button>
@@ -40,7 +35,7 @@
         <!-- header -->
         <div class="header">
           <div class="header-img">
-            <img src="./image/artsafphoto-26.jpg" />
+            <img src="./image/artsafphoto-26.jpg" loading="lazy" />
           </div>
           <div class="hscd-content">
             <p data-key="names"></p>
@@ -105,7 +100,7 @@
                     <td>6</td>
                     <td>
                       <div class="heart-container">
-                        <img src="./image/heart.png" alt="heart" class="heart-img" />
+                        <img src="./image/heart.png" alt="heart" class="heart-img" loading="lazy" />
                         <span class="heart-number">7</span>
                       </div>
                     </td>
@@ -148,14 +143,14 @@
             <div class="text-box">
               <div class="full-text">
                 <p class="text-h1" data-key="darlings"></p>
-                <p class="text2" data-key="text"></p>
+                <p class="text2" data-key="text" style="white-space: pre-line;"></p>
               </div>
             </div>
           </div>
           <div class="main-img">
-            <img class="fst-img imgs" src="./image/artsafphoto-204.jpg" />
-            <img class="img-scd imgs" src="./image/artsafphoto-147.jpg" />
-            <img class="img-three imgs" src="./image/artsafphoto-203.jpg" />
+            <img class="fst-img imgs" src="./image/artsafphoto-204.jpg" loading="lazy"/>
+            <img class="img-scd imgs" src="./image/artsafphoto-189.jpg" loading="lazy"/>
+            <img class="img-three imgs" src="./image/artsafphoto-203.jpg" loading="lazy"/>
 
           </div>
         </div>
@@ -165,24 +160,24 @@
           <p class="schedule" data-key="schedule"></p>
           <div class="schedule-content">
             <div class="bride-home">
-              <img class="sched-img slide-in" src="./image/flower.png" />
-              <p class="slide-in">11։00</p>
+              <img class="sched-img slide-in" src="./image/flower.png" loading="lazy"/>
+              <p class="sch_tm slide-in" >11։00</p>
               <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
                 <span data-key="bride_home"></span>
               </a>
             </div>
             <div class="church">
-              <img class="sched-img slide-in" src="./image/church.png" />
-              <p class="slide-in">14։00</p>
+              <img class="sched-img slide-in" src="./image/church.png" loading="lazy"/>
+              <p class="sch_tm slide-in">14։00</p>
               <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
                 <span data-key="church"></span>
               </a>
             </div>
             <div class="party">
-              <img class="sched-img slide-in" src="./image/cheers.png" />
-              <p class="slide-in">17։00</p>
+              <img class="sched-img slide-in" src="./image/cheers.png" loading="lazy"/>
+              <p class="sch_tm slide-in">17։00</p>
               <a class="slide-in" href="https://yandex.ru/maps/-/CDWOMUP0" target="_blank">
                 <i class="fa-solid fa-location-dot" style="color: #4a4952; font-size: 43px"></i>
                 <span data-key="party"></span>
@@ -192,11 +187,9 @@
           <div class="slider-background">
             <div class="slider-container">
               <div class="slider">
-                <div class="slide"><img src="./image/artsafphoto-17.jpg" alt="Image 1"></div>
-                <div class="slide"><img src="./image/artsafphoto-189.jpg" alt="Image 2"></div>
-                <div class="slide"><img src="./image/artsafphoto-147.jpg" alt="Image 3"></div>
-                <div class="slide"><img src="./image/artsafphoto-97.jpg" alt="Image 4"></div>
-                <div class="slide"><img src="./image/artsafphoto-148.jpg" alt="Image 5"></div>
+                <div class="slide"><img src="./image/artsafphoto-17.jpg" alt="Image 1" loading="lazy"></div>
+                <div class="slide"><img src="./image/artsafphoto-147.jpg" alt="Image 2" loading="lazy"></div>
+                <div class="slide"><img src="./image/artsafphoto-148.jpg" alt="Image 3" loading="lazy"></div>
               </div>
               <button class="prev">&#10094;</button>
               <button class="next">&#10095;</button>
@@ -205,97 +198,45 @@
         </div>
       </div>
     </div>
-    <div id="automusic">
-      <audio id="backgroundMusic" loop autoplay>
-        <source src="./music/videoplayback.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
+  </div>
+  <div id="automusic">
+    <audio id="backgroundMusic" loop autoplay>
+      <source src="./music/A-Thousand-Years-by-Christina-Perri-Violin-Cover-Joel-Graing.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
 
-      <div class="content">
-        <div class="lang-switch">
-          <button class="armenian_bttn" onclick="setLang('hy')"></button>
-          <button class="russian_bttn" onclick="setLang('ru')"></button>
+    <div class="content">
+      <div class="lang-switch">
+        <button class="armenian_bttn" onclick="setLang('hy')"></button>
+        <button class="russian_bttn" onclick="setLang('ru')"></button>
+      </div>
+      <!-- Play button -->
+      <div class="unlock-screen" id="unlockScreen">
+        <p class="openInvi" data-key="open_invitation"></p>      
+        <div class="slider-container1" id="slider1">
+
+          <div id="arrow">
+            <div class="slider-button" id="sliderBtn">
+              <p id="movingImage">></p>
+            </div>
+            <p class="dots"></p>
+            <p class="shadoww"></p>
+          </div> 
+
         </div>
-        <!-- Play button -->
-        <p class="openInvi" data-key="open_invitation"></p>
+      </div>
+      <!-- <p class="openInvi" data-key="open_invitation"></p>
         <div id="arrow">
           <p id="movingImage">></p>
           <p class="dots"></p>
           <p class="shadoww"></p>
-        </div>
-      </div>
+        </div> -->
     </div>
   </div>
 
 </body>
 
 <script>
-  const slider = document.querySelector('.slider');
-  const slides = document.querySelectorAll('.slide');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
-  const sliderContainer = document.querySelector('.slider-container');
-
-  let currentIndex = 0; // Tracks the current slide index
-  let autoSlideInterval; // Will hold the interval ID for auto-sliding
-
-  // Function to display a specific slide based on the index
-  function showSlides(index) {
-    if (index >= slides.length) {
-      currentIndex = 0; // Reset to first slide if at the end
-    } else if (index < 0) {
-      currentIndex = slides.length - 1; // Go to last slide if at the beginning
-    } else {
-      currentIndex = index; // Otherwise, set to the provided index
-    }
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide transition
-  }
-
-  // Function to move to the next slide
-  function nextSlide() {
-    showSlides(currentIndex + 1);
-  }
-
-  // Function to move to the previous slide
-  function prevSlide() {
-    showSlides(currentIndex - 1);
-  }
-
-  // Start the automatic sliding of images
-  function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 4000); // Slide every 4 seconds
-  }
-
-  // Stop the automatic sliding
-  function stopAutoSlide() {
-    clearInterval(autoSlideInterval); // Clear the interval
-  }
-
-  // Add event listeners for navigation buttons
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-
-  // Stop auto-slide when the mouse enters the slider container
-  sliderContainer.addEventListener('mouseover', stopAutoSlide);
-
-  // Restart auto-slide when the mouse leaves the slider container
-  sliderContainer.addEventListener('mouseout', startAutoSlide);
-
-  // Start auto-slide when the page loads
-  // startAutoSlide();
-  // updateDots(); // Initialize the dots
-
-
-
-  // document.addEventListener('DOMContentLoaded', function () {
-  //     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-
-  //     if (isIOS) {
-  //       document.body.style.backgroundAttachment = 'scroll';
-  //     }
-  //   });
-
-
   const translations = {
     hy: {
       names: "Կառլեն և Ռուզաննա",
@@ -305,7 +246,7 @@
       seconds: "Վայրկյան",
       month: "Հուլիս",
       darlings: "Սիրելի հյուրեր",
-      text: "Մենք ճանապարհ ենք անցել՝ լի սիրով, երջանկությամբ ու միասին հաղթահարած դժվարություններով։ Այժմ եկել է ժամանակը միավորվելու՝ որպես ամուսիններ, և մենք՝ սիրով ու մեծ ուրախությամբ, հրավիրում ենք Ձեզ մեր սիրո և երջանկության օրը միասին նշելու, որը տեղի կունենա`",
+      text: "Մենք ճանապարհ ենք անցել՝ լի սիրով, երջանկությամբ ու միասին հաղթահարած դժվարություններով։ Այժմ եկել է ժամանակը միավորվելու՝ որպես ամուսիններ, և մենք՝ սիրով ու մեծ ուրախությամբ, հրավիրում ենք Ձեզ մեր սիրո և երջանկության օրը միասին նշելու:",
       schedule: "Ծրագիր",
       bride_home: "Հարսի Տուն",
       church: "Եկեղեցի",
@@ -319,20 +260,21 @@
       fri: "Ու",
       sat: "Շա",
     },
+
     ru: {
       names: "Карлен и Рузанна",
-      days: "День",
-      times: "Час",
+      days: "Дней",
+      times: "Часов",
       minutes: "Минут",
       seconds: "Секунд",
-      month: "Рузанна",
-      darlings: "Рузанна հյուրեր",
-      text: "Рузанна",
-      schedule: "Рузанна",
-      bride_home: "РузаннаՏուն",
-      church: "Рузанна",
-      party: "Рузанна սրահ",
-      open_invitation: "Рузанна հրավիրատոմսը",
+      month: "Июль",
+      darlings: "Дорогие родные и близкие!",
+      text: "Мы давно ждали момента, когда сможем разделить с вами самый важный и счастливый день в нашей жизни. \nСовсем скоро состоится наша свадьба! Мы рады пригласить вас стать свидетелями этого торжества и разделить с нами самые яркие моменты!",
+      schedule: "Тайминг",
+      bride_home: "Утро невесты",
+      church: "Венчание",
+      party: "Ресторан",
+      open_invitation: "Разблокируйте приглашение",
       sun: "Вс",
       mon: "Пн",
       tue: "Вт",
@@ -347,6 +289,15 @@
     document.querySelectorAll("[data-key]").forEach((el) => {
       const key = el.getAttribute("data-key");
       el.textContent = translations[lang][key];
+      if (lang == 'ru'){
+        document.getElementsByClassName("hscd-content")[0].style.fontFamily = "russian";
+        document.getElementsByClassName("month_name")[0].style.fontFamily = "russian_regular";
+        document.getElementsByClassName("openInvi")[0].style.fontFamily = "russian_regular";
+        document.getElementsByClassName("timer")[0].style.fontFamily = "russian_regular";
+        document.getElementsByClassName("main-text")[0].style.fontFamily = "russian_regular";
+        document.getElementsByClassName("text-box")[0].style.fontFamily = "russian_regular";
+        document.getElementsByClassName("scd-box")[0].style.fontFamily = "russian_regular";
+      }
     });
   }
   document.addEventListener("DOMContentLoaded", () => setLang("hy"));
@@ -383,26 +334,31 @@
   // Initial call to display the timer immediately on page load
   updateTimer();
   var audio = document.getElementById("backgroundMusic");
-  document
-    .getElementById("movingImage")
-    .addEventListener("click", function () {
-      audio.play().catch(function (error) {
-        console.error("Audio playback failed:", error);
-      });
-      if (window.innerWidth <= 463) {
-        this.style.left = "276px";
-      } else if (window.innerWidth > 463 && window.innerWidth <= 580) {
-        this.style.left = "342px";
-      } else {
-        this.style.left = "402px";
-      }
-      setTimeout(() => {
-        document.getElementById("automusic").style.display = "none";
-        document.getElementById("full").style.display = "block";
-      }, 2000); // 5000 milliseconds = 5 seconds
-      observeImages();
-      slideIn();
-    });
+  // document
+  //   .getElementById("movingImage")
+  //   .addEventListener("click", function () {
+  //     audio.play().catch(function (error) {
+  //       console.error("Audio playback failed:", error);
+  //     });
+  //     if (window.innerWidth <= 463) {
+  //       this.style.left = "276px";
+  //     } else if (window.innerWidth > 463 && window.innerWidth <= 580) {
+  //       this.style.left = "342px";
+  //     } else {
+  //       this.style.left = "402px";
+  //     }
+  //     setTimeout(() => {
+        
+  //       // document.getElementById("automusic").style.display = "none";
+  //       // document.getElementById("full").style.display = "block";
+  //     }, 2000); // 5000 milliseconds = 5 seconds
+  //     observeImages();
+  //     slideIn();
+  //   });
+  observeImages();
+  slideIn();
+  slideImgs();
+  slideArrow();
 
   function observeImages() {
     const images = document.querySelectorAll(".imgs");
@@ -446,6 +402,102 @@
       observer.observe(div);
     });
   }
+
+  function slideImgs() {
+      const slider = document.querySelector('.slider');
+      const slides = document.querySelectorAll('.slide');
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      const sliderContainer = document.querySelector('.slider-container');
+
+      let currentIndex = 0; // Tracks the current slide index
+      let autoSlideInterval; // Will hold the interval ID for auto-sliding
+
+      // Function to display a specific slide based on the index
+      function showSlides(index) {
+        if (index >= slides.length) {
+          currentIndex = 0; // Reset to first slide if at the end
+        } else if (index < 0) {
+          currentIndex = slides.length - 1; // Go to last slide if at the beginning
+        } else {
+          currentIndex = index; // Otherwise, set to the provided index
+        }
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`; // Slide transition
+      }
+
+      // Function to move to the next slide
+      function nextSlide() {
+        showSlides(currentIndex + 1);
+      }
+
+      // Function to move to the previous slide
+      function prevSlide() {
+        showSlides(currentIndex - 1);
+      }
+
+      // Start the automatic sliding of images
+      function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, 4000); // Slide every 4 seconds
+      }
+
+      // Stop the automatic sliding
+      function stopAutoSlide() {
+        clearInterval(autoSlideInterval); // Clear the interval
+      }
+
+      // Add event listeners for navigation buttons
+      nextBtn.addEventListener('click', nextSlide);
+      prevBtn.addEventListener('click', prevSlide);
+
+      // Stop auto-slide when the mouse enters the slider container
+      sliderContainer.addEventListener('mouseover', stopAutoSlide);
+
+      // Restart auto-slide when the mouse leaves the slider container
+      sliderContainer.addEventListener('mouseout', startAutoSlide);
+    }
+
+    function slideArrow() {
+      const slider1 = document.getElementById("slider1");
+      const button = document.getElementById("sliderBtn");
+      // const unlockScreen = document.getElementById("unlockScreen");
+      // const invitationContent = document.getElementById("invitationContent");
+
+      let isDragging = false;
+      let startX = 0;
+      let currentX = 0;
+
+      button.addEventListener("touchstart", (e) => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+      });
+
+      button.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX - startX;
+        const max = slider1.offsetWidth - button.offsetWidth;
+        if (currentX < 0) currentX = 0;
+        if (currentX > max) currentX = max;
+        button.style.left = currentX + "px";
+      });
+
+      button.addEventListener("touchend", () => {
+        isDragging = false;
+        const max = slider1.offsetWidth - button.offsetWidth;
+        if (currentX >= max - 10) {
+          // Slide complete
+          document.getElementById("automusic").style.display = "none";
+          document.getElementById("full").style.display = "block";
+          audio.play().catch(function (error) {
+                console.error("Audio playback failed:", error);
+              });
+          // unlockScreen.style.display = "none";
+          // invitationContent.style.display = "block";
+        } else {
+          // Slide not complete - reset
+          button.style.left = "0px";
+        }
+      });
+    }  
 </script>
 
 </html>

@@ -8,7 +8,19 @@
     src: url("./fonts/Vrdznagir.otf");
 }
 
-/* body {
+
+
+@font-face {
+    font-family: "russian";
+    src: url('./fonts/Azbuka03_D.ttf')
+}
+
+@font-face {
+    font-family: "russian_regular";
+    src: url('./fonts/A920_Regular.ttf')
+}
+
+body {
     position: relative;
     z-index: -999999999999;
     background-image: url('./image/artsafphoto-40.jpg');
@@ -17,8 +29,11 @@
     background-position: center;
     background-repeat: no-repeat;
     
-} */
+}
 
+#full {
+    padding-bottom: 50px;
+}
 
 .slider-background {
     position: relative;
@@ -88,13 +103,6 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dots-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .dot {
     height: 15px;
     width: 15px;
@@ -153,7 +161,7 @@ button {
 
 #movingImage {
     position: relative;
-    top: 70vh;
+    /* top: 70vh; */
     transition: left 1s ease;
     color: black;
     border: 1px solid;
@@ -167,11 +175,42 @@ button {
     font-weight: 700;
 }
 
+.unlock-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100vh; */
+}
+
+.slider-container1 {
+    margin: 2rem auto 0;
+    width: 70%;
+    /* height: 56px; */
+    /* background: #ddd; */
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    top: 63vh;
+}
+
+.slider-button {
+    position: absolute;
+    left: 0;
+    transition: background 0.3s;
+    user-select: none;
+    touch-action: none;
+}
+
+.invitation-content {
+    display: none;
+    padding: 2rem;
+}
+
 .openInvi{
-    width: 500px;
+    width: 100%;
     position: relative;
     top: 67vh;
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     font-family: 'armhandwrite';
     font-weight: 600;
@@ -181,7 +220,7 @@ button {
 
 .dots{
     position: relative;
-    top: 69vh;
+    /* top: 69vh; */
     font-size: 52px;
     width: 310px;
     text-align: center;
@@ -197,7 +236,7 @@ button {
     border: 3px solid white;
     border-radius: 50%;
     position: relative;
-    top: 70vh;
+    /* top: 70vh; */
     transform: rotate(-4deg);
     opacity: 0.6;
 }
@@ -207,7 +246,7 @@ button {
     flex-wrap: nowrap;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     color: #e0dada;;
 }
 
@@ -442,6 +481,7 @@ td {
 
 .full-text {
     text-align: center;
+    width: 100%;
 }
 
 .text-h1, .schedule {
@@ -459,7 +499,6 @@ td {
     align-items: center;
     margin: auto;
     margin-top: 30vh;
-    margin-bottom: 60px;
     padding-top: 20px;
     font-family: 'vrdznagir';
     text-shadow: 2px 1px #c3b0b0b8;
@@ -501,7 +540,13 @@ td {
     margin-bottom: 15px;
 }
 
+.sch_tm{
+    font-family: 'armhandwrite';
+    font-weight: 700;
+}
+
 .text2 {
+    margin: auto;
     width: 432px;
     color: #555555;
     font-size: 26px;
@@ -538,7 +583,7 @@ td {
     }
 
     .dots {
-        top: 69vh;
+        /* top: 69vh; */
     }
 
     .main-img img {
@@ -585,53 +630,34 @@ td {
 }
 
 @media screen and (max-width: 782px) {
-    /* body {
-        position: relative;
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    /* Fixed full-page background image */
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         background: url('./image/artsafphoto-38.jpg') no-repeat center center;
         background-size: cover;
-        background-attachment: scroll;
-        background-attachment: fixed; */
+        z-index: -1;
+     /* Puts it behind everything */
+    }
 
-        /* fix for iPhone */
-        
-            /* iPhone hack */
-            /* -webkit-overflow-scrolling: touch;
-            overflow-x: hidden;
-        
-    } */
-
-/* Reset and body setup */
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-/* Fixed full-page background image */
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url('./image/artsafphoto-38.jpg') no-repeat center center;
-    background-size: cover;
-    z-index: -1;
-    /* Puts it behind everything */
-}
-
-/* Your content goes on top */
-.full {
-    position: relative;
-    z-index: 1;
-    /* padding: 2rem; */
-    color: white;
-    /* Use dark or light text depending on the image */
-}
+    /* Your content goes on top */
+    .full {
+        position: relative;
+        z-index: 1;
+    }
 
     .hscd-content {
-        top: 370px;
+        top: 557px;
     }
 
     .timer{
@@ -718,16 +744,16 @@ html {
     .openInvi {
         top: 66vh;
         font-size: 36px;
-        width: 320px;
+        /* width: 320px; */
     }
 
     .dots {
-        top: 68vh;
+        /* top: 68vh; */
         width: 250px;
     }
 
     #movingImage, .shadoww {
-        top: 69vh;
+        /* top: 69vh; */
     }
            
 }
@@ -738,8 +764,8 @@ html {
     }
 
     .hscd-content {
-        font-size: 28px;
-        top: 305px;
+        font-size: 39px;
+        top: 582px;
     }
 
     .hscd-content p {
@@ -816,11 +842,11 @@ html {
     }
 
     #movingImage, .shadoww {
-        top: 68vh;
+        /* top: 68vh; */
     }   
 
     .dots {
-        top: 67vh;
+        /* top: 67vh; */
         width: 184px;
         border-bottom: 5px dotted;
     }
