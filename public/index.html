@@ -449,8 +449,6 @@
     sliderContainer.addEventListener('mouseout', startAutoSlide);
   }
 
-  var audio = document.getElementById("backgroundMusic");
-
   function slideArrow() {
     const slider1 = document.getElementById("slider1");
     const button = document.getElementById("sliderBtn");
@@ -480,6 +478,7 @@
         // Slide complete
         document.getElementById("automusic").style.display = "none";
         document.getElementById("full").style.display = "block";
+        var audio = document.getElementById("backgroundMusic");
         audio.play().catch(function (error) {
           console.error("Audio playback failed:", error);
         });
